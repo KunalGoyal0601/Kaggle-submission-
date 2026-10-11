@@ -17,7 +17,7 @@ class KaggleNotebookSetupTests(unittest.TestCase):
                         self.assertFalse(cell.get("outputs"))
 
     def test_notebook_uses_local_data_and_not_a_fixed_drive_path(self):
-        notebook = json.loads(NOTEBOOK.read_text(encoding="utf-8"))
+        notebook = json.loads(NOTEBOOKS[0].read_text(encoding="utf-8"))
         source = "\n".join(
             "".join(cell.get("source", []))
             for cell in notebook["cells"] if cell.get("cell_type") == "code"
