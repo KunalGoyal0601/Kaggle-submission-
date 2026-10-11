@@ -23,7 +23,7 @@ If these notebooks belong to different competitions, the cleanest long-term setu
 ## Reproducing a notebook
 
 1. Open the notebook and read its data-loading cells.
-2. Download the dataset from the relevant Kaggle competition and place it in the expected local path.
+2. Download the dataset from the relevant Kaggle competition and place `train.csv` and `test.csv` inside a local `data/` directory. The podcast notebook checks this location and the current working directory. Competition data is not redistributed here.
 3. Install the libraries used by the notebook.
 4. Run from a clean kernel and confirm the generated submission columns match the competition's sample submission.
 
@@ -32,3 +32,8 @@ No claim is made that the notebooks currently execute end-to-end in a clean envi
 ## Author
 
 Kunal Goyal — [GitHub profile](https://github.com/KunalGoyal0601)
+
+
+## Data licensing and portability
+
+Competition datasets are not included because their redistribution terms are controlled by the relevant competition. Download them directly from Kaggle after reviewing the competition rules. The podcast notebook no longer depends on a fixed Google Drive path or the Google Colab download helper; it reads local `data/train.csv` and `data/test.csv` files and writes `submission.csv` in the working directory.
